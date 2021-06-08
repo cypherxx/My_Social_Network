@@ -1,0 +1,12 @@
+body{
+    
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    
+    text-transform:uppercase;
+}
