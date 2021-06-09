@@ -1,12 +1,28 @@
 body{
     
-   
-    background-position: center;
+    background-image: url('social3.jpg');
+    
     background-repeat: no-repeat;
-    background-size: fixed;
+    background-size: cover;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
     
     text-transform:uppercase;
 }
+
+.container-sm{  
+     
+    
+    
+    margin-left: 10px;
+    text-align: left; 
+    padding-top: 100px;  
+    }
+
+.btn{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 300px;
+
+    }

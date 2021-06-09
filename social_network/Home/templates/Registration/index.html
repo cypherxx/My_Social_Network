@@ -1,7 +1,23 @@
 {% extends "base.html" %}
-{% block title %} Home page {% endblock %}
+{% block title %} Dashboard {% endblock %}
 {% block content %}
-
-<h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">My Social Network</h2>
+{% load static %}
+<div id="header">
+    <span class="logo"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; text-align: left; color: rgb(104, 103, 103); font-size: 55px; margin-left: 10px; margin-top: 300px;" > Social Network </h1></span>
+</div>
+<div class="container-lg ">
+    <div class="container-sm">
+    <div class="d-grid gap-2">   
+    <form action="{% url 'login' %}" method="GET">
+        <button type="submit" class="btn btn-outline-dark btn-lg">LOG IN</button>
+    </form>
+    <form action="{% url 'signup' %}" method="GET">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-dark btn-lg">SIGN UP</button>
+        </form>
+    
+        </div>
+    </div>
+</div>
 
 {% endblock %}

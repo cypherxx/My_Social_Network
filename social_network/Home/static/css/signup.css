@@ -1,0 +1,22 @@
+
+
+.form-control{
+    font-size: 18px !important;
+    border-radius: 6 !important;
+    border-color: rgb(90, 89, 89);
+    color: rgb(104, 101, 101) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.form-label{
+    margin-top: 10px;
+    font-size: 18px !important;
+}
+
+input::placeholder{
+    color: grey !important;
+}
+
+.flexing{
+    display: inline-flex;
+}

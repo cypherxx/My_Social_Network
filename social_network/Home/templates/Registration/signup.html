@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% load static %}
+
+{% block content %}
+<div id="header">
+    <span class="logo"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; text-align: left; color: rgb(104, 103, 103); font-size: 55px; margin-left: 50px; margin-top: 30px;" > SIGN UP </h1></span>
+</div>
+<div class="container row" style="margin-top: 50px;">
+    <div class="col-md-7 col-lg-8 mx-left">
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        <div class="row g-3" style="margin-top: 30px; margin-left: 2px;">
+            <div class="col-sm-5">
+                <label for="firstName" class="form-label" style="color: black;">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                    name="first_name" autocomplete="off" autofocus="autofocus">
+                <span id="fn" class="text-danger" style="font-weight: 500;"></span>
+            </div>
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label" style="color: black;">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name"
+                    name="last_name" autocomplete="off">
+                <span id="ln" class="text-danger" style="font-weight: 500;"></span>
+            </div>
+            </div>
+            
+            <div class="col-12">
+                <label for="email" class="form-label" style="color: black;">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com"
+                    name="email" autocomplete="off">
+                <span id="em" class="text-danger" style="font-weight: 500;"></span>
+            </div>
+            <div class="col-12">
+                <label for="phone_number" class="form-label col-12">Phone Number</label>
+                <input class="form-control col-12" id="phone" placeholder="9292929292" autocomplete="off"
+                    type="tel" name="phone" />
+                <span id="ph" class="text-danger col-12" style="font-weight: 500;"></span>
+            </div>
+            <div class="col-12">
+                <label for="password" class="form-label" style="color: black;">Password</label>
+                <input name='password' type="password" class="form-control" id="password"
+                    placeholder="Password" autocomplete="off">
+                <span id="pass" class="text-danger" style="font-weight: 500;"></span>
+            </div>
+            <div class="col-lg-6">
+                <button class="btn btn-dark w-100 " name="submit" value="submit" type="submit" style="margin-left: auto;">
+                    Sign Up
+                </button>
+            </div>
+
+        
+        
+
+    </form>
+    </div>
+
+</div>
+{% endblock %}
