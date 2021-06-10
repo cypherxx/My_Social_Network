@@ -15,6 +15,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+    <li class="{{ message.tags }}">
+    {{ message|safe }}
+    <a href="#" class="close">x</a>
+    </li>
+    {% endfor %}
+    </ul>
+   {% endif %}
    
  <div id="content">
  {% block content %}
